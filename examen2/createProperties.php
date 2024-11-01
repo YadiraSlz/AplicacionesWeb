@@ -1,13 +1,13 @@
 <?php
-include "includes/headers.php"; // Changed to relative path
-require "includes/config/connectDB.php"; // Changed to relative path
+include "includes/headers.php"; 
+require "includes/config/connectDB.php"; 
 
 $db = connectdb();
 
 $query_sellers = "SELECT id, name FROM SELLERS";
 $seller_result = mysqli_query($db, $query_sellers);
 
-// Check if the query was successful
+
 if (!$seller_result) {
     die("Error fetching sellers: " . mysqli_error($db));
 }
@@ -29,10 +29,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $insert_response = mysqli_query($db, $query);
 
     if ($insert_response) {
-        echo "Property created successfully :)"; // Success message
+        echo "Property created successfully :)"; 
     } else {
-        echo "Error creating the property: " . mysqli_error($db); // Error message
-    }
+        echo "Error creating the property: " . mysqli_error($db); 
+}
 }
 ?>
 
