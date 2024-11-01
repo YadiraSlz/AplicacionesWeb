@@ -40,5 +40,3 @@ INSERT INTO PROPERTIES (title, price, image, description, rooms, wc, garage, tim
 SELECT * FROM SELLERS
 
 SELECT * FROM PROPERTIES
-
-DESCRIBE PROPERTIES
